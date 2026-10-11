@@ -13,7 +13,6 @@ import { existsSync } from 'node:fs';
 import path from 'node:path';
 
 const DIST = path.resolve('dist');
-
 if (!existsSync(DIST)) {
   console.error('dist/ not found — run `expo export --platform web` first.');
   process.exit(1);
@@ -69,6 +68,12 @@ await cp(path.join(DIST, 'index.html'), path.join(DIST, '404.html'));
 // Pages runs Jekyll by default, which drops files starting with an underscore
 // (`_expo/`) — exactly where the JS bundle lives.
 await writeFile(path.join(DIST, '.nojekyll'), '');
+
+// gh-pages leaves these behind from the previous release when they are not in
+// the new output. Guard against stale files (e.g. a `.gitignore`) being served.
+for (const stale of ['_config.yml', '.gitignore']) {
+  await rm(path.join(DIST, stale), { force: true });
+}
 
 // A tiny health file so it is obvious which commit is deployed.
 const meta = {
