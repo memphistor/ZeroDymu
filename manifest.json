@@ -1,0 +1,37 @@
+{
+  "name": "Zero Dymu",
+  "short_name": "Zero Dymu",
+  "description": "Rzucaj palenie małymi krokami. Bez presji, dzień po dniu.",
+  "lang": "pl",
+  "dir": "ltr",
+  "start_url": "/ZeroDymu/",
+  "scope": "/ZeroDymu/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "/ZeroDymu/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/ZeroDymu/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/ZeroDymu/maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/ZeroDymu/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
