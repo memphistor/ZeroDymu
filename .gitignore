@@ -39,3 +39,6 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# web build output (deployed to the gh-pages branch by `npm run deploy`)
+/dist

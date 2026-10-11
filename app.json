@@ -1,15 +1,19 @@
 {
   "expo": {
-    "name": "App",
-    "slug": "App",
+    "name": "Zero Dymu",
+    "slug": "zero-dymu",
+    "scheme": "zerodymu",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "backgroundColor": "#F5F9FD",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.zerodymu.app"
     },
     "android": {
+      "package": "com.zerodymu.app",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -19,7 +23,14 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "static"
+    },
+    "experiments": {
+      "typedRoutes": true,
+      "baseUrl": "/ZeroDymu"
+    },
+    "plugins": ["expo-router"]
   }
 }
